@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS students_houses;
 DROP TABLE IF EXISTS students;
 DROP TABLE IF EXISTS houses;
 
@@ -13,7 +12,6 @@ CREATE TABLE students (
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   house VARCHAR(255),
-  -- house VARCHAR(255) REFERENCES houses(name) ON DELETE CASCADE,
   age INT4
 );
 

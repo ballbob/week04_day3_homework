@@ -24,3 +24,6 @@ get '/hogwarts/students' do
   @students = Student.all()
   erb (:index)
 end
+
+#SORT
+

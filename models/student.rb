@@ -50,12 +50,22 @@ class Student
     SqlRunner.run(sql)
   end
 
-  # def find_house()
-  #   sql = "SELECT * FROM houses
-  #         INNER JOIN students_houses ON houses(id)
-  #         WHERE student_id = #{@id};"
+  def house
+    sql = "SELECT * FROM houses WHERE houses.name = #{@house}"
+    result = SqlRunner.run(sql)
+    resultobject = result.map { |house| House.new(house)}
+    return resultobject
+  end
+
+ # def add_house_id
+ #   sql = "UPDATE students SET house_id = houses(id) WHERE #houses(name) = house"
+ #   SqlRunner.run(sql)
+ # end
+
+  # def sorting_hat
+  #   sql = "SELECT * FROM houses WHERE id = house_id;"
   #   result = SqlRunner.run(sql)
-  #   resultobject = result.map { |house| House.new(house)}
+  #   resultobject = result.map {|house| House.new(house)}
   #   return resultobject
   # end
 

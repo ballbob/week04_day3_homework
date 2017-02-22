@@ -1,0 +1,10 @@
+html {
+  background-color: darkred;
+  font-family: Helvetica;
+  color: white;
+}
+
+.student {
+  display:flex;
+  justify-content: center;
+}
