@@ -7,7 +7,6 @@ require_relative('./models/student.rb')
 
 get '/hogwarts/new' do
   erb(:new)
-  # redirect to('/hogwarts/students')
 end
 
 # SUBMIT (update table)
@@ -25,5 +24,4 @@ get '/hogwarts/students' do
   erb (:index)
 end
 
-#SORT
 

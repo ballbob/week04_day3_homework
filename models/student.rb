@@ -57,16 +57,9 @@ class Student
     return resultobject
   end
 
- # def add_house_id
- #   sql = "UPDATE students SET house_id = houses(id) WHERE #houses(name) = house"
- #   SqlRunner.run(sql)
- # end
-
-  # def sorting_hat
-  #   sql = "SELECT * FROM houses WHERE id = house_id;"
-  #   result = SqlRunner.run(sql)
-  #   resultobject = result.map {|house| House.new(house)}
-  #   return resultobject
-  # end
+  def self.change_houses
+    sql = "ALTER TABLE students ALTER COLUMN houses INT4"
+    SqlRunner.run(sql)
+  end
 
 end
